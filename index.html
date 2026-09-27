@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Relógio oficial e contagem regressiva para uma data configurável.">
+  <title>Relógio & Contagem Regressiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+
+  <main class="container">
+    <header class="hero">
+      <div class="badge"><span class="pulse"></span> Horário de São Paulo</div>
+      <h1>Tempo até a <span>eleição</span></h1>
+      <p>Horário atual e contagem regressiva em tempo real.</p>
+    </header>
+
+    <section class="clock-grid">
+      <article class="card current-card">
+        <div class="card-top">
+          <div>
+            <span class="eyebrow">AGORA</span>
+            <h2>Hora atual</h2>
+          </div>
+          <div class="icon">◷</div>
+        </div>
+        <div id="currentTime" class="big-time">--:--:--</div>
+        <div id="currentDate" class="date">Carregando data...</div>
+        <div class="timezone">America/Sao_Paulo <span>UTC−03:00</span></div>
+      </article>
+
+      <article class="card countdown-card">
+        <div class="card-top">
+          <div>
+            <span class="eyebrow">CONTAGEM REGRESSIVA</span>
+            <h2>Até a eleição</h2>
+          </div>
+          <div class="icon">⌛</div>
+        </div>
+
+        <div id="countdown" class="countdown">
+          <div class="time-box"><strong id="days">00</strong><span>dias</span></div>
+          <div class="separator">:</div>
+          <div class="time-box"><strong id="hours">00</strong><span>horas</span></div>
+          <div class="separator">:</div>
+          <div class="time-box"><strong id="minutes">00</strong><span>min</span></div>
+          <div class="separator">:</div>
+          <div class="time-box"><strong id="seconds">00</strong><span>seg</span></div>
+        </div>
+
+        <div class="target">
+          <span>Data configurada</span>
+          <strong id="targetDate">04/10/2026 às 08:00</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="status" id="status">
+      <span class="status-dot"></span>
+      <span id="statusText">Sincronizando horário...</span>
+    </section>
+
+    <footer>
+      <span>Atualização automática</span>
+      <span class="dot">•</span>
+      <span>Fonte: TimeAPI</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
