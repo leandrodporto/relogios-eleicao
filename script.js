@@ -6,7 +6,7 @@
  * Exemplo:
  * 04 de outubro de 2026 às 08:00 em São Paulo:
  */
-const TARGET_DATE = "2026-10-04T08:00:00-03:00";
+const TARGET_DATE = "2026-10-25T08:00:00-03:00";
 
 const TIME_API =
   "https://timeapi.io/api/v1/timezone/zone?timeZone=America%2FSao_Paulo";
